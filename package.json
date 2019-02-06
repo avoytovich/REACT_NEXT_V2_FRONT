@@ -1,0 +1,30 @@
+{
+  "name": "HyperJarAdminPanel",
+  "version": "1.0.0",
+  "repository": "",
+  "description": "",
+  "keywords": [],
+  "author": "Mykola Krys",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "antd": "^3.8.1",
+    "babel-plugin-import": "^1.8.0",
+    "babel-plugin-inline-import": "^3.0.0",
+    "babel-polyfill": "^6.26.0",
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "firebase": "^5.8.2",
+    "next": "latest",
+    "next-routes": "^1.4.2",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-firebase": "^2.2.8",
+    "sw-precache-webpack-plugin": "^0.11.5"
+  }
+}
