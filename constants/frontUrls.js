@@ -15,7 +15,7 @@ const URLS = [
     name: 'testWithId',
     pattern: '/test/:id',
     path: 'test',
-  }
+  },
 ];
 
 module.exports = URLS;

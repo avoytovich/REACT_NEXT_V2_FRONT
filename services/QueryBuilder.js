@@ -1,4 +1,3 @@
-
 const isNeedToAddComma = (index, array) => array.length - 1 !== index;
 
 class Param {
@@ -13,22 +12,25 @@ class Param {
     return this;
   }
 
-  parseMeAndChild() {gi
+  parseMeAndChild() {
     if (this.child.length > 0) {
       let myChilds = '';
       for (const [index, child] of this.child.entries()) {
-        myChilds += `${child.parseMeAndChild()}${isNeedToAddComma(index, this.child) ? ',' : ''}`;
-      };
+        myChilds += `${child.parseMeAndChild()}${
+          isNeedToAddComma(index, this.child) ? ',' : ''
+        }`;
+      }
       return this.name + `{${myChilds}}`;
     }
     return this.name;
   }
 }
 
-
 export default class QueryBuilderService {
   listOfParams = [];
+
   startSymbol = '{';
+
   endSymbol = '}';
 
   addParam(param, callback) {
@@ -41,14 +43,14 @@ export default class QueryBuilderService {
   build() {
     let string = `${this.startSymbol}`;
     this.listOfParams.forEach((element, index, array) => {
-      string += `${element.parseMeAndChild()}${isNeedToAddComma(index, array) ? ',' : ''}`;
+      string += `${element.parseMeAndChild()}${
+        isNeedToAddComma(index, array) ? ',' : ''
+      }`;
     });
     string += `${this.endSymbol}`;
     return string;
   }
 }
-
-
 
 // EXAMPLE OF QUERY BUILDER USAGE
 // const query = new QueryBuilderService();
@@ -68,7 +70,3 @@ export default class QueryBuilderService {
 //     });
 //     param.addAttribute('cost');
 //   }));
-
-
-
-

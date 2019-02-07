@@ -3,4 +3,4 @@ yarn.lock
 node_modules/
 .next/
 .idea/
-/static/sw.js
+./static/sw.js

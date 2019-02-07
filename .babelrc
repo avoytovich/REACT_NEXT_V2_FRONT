@@ -1,8 +1,12 @@
 {
   "plugins": [
     ["inline-import", { "extensions": [".css"] }],
-    ["import", { "libraryName": "antd" }]
+    ["import", { "libraryName": "antd" }],
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
+    "@babel/plugin-proposal-object-rest-spread",
+    "transform-object-assign",
+    "babel-plugin-espower"
   ],
-  "presets": ["next/babel"],
+  "presets": ["@babel/preset-env","@babel/preset-react", "next/babel"],
   "ignore": []
 }

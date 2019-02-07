@@ -1,6 +1,5 @@
 const withSass = require('@zeit/next-sass');
 const path = require('path');
-const webpack = require('webpack');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 
 module.exports = withSass({
@@ -34,12 +33,25 @@ module.exports = withSass({
           ],
         }),
       );
-      cfg.plugins = cfg.plugins.filter(
-        plugin => plugin.constructor.name !== 'UglifyJsPlugin',
-      );
-      cfg.plugins.push(new webpack.optimize.UglifyJsPlugin());
+      // cfg.plugins = cfg.plugins.filter(
+      //   plugin => plugin.constructor.name !== 'UglifyJsPlugin',
+      // );
+      cfg.optimization.minimize = true;
     }
     cfg.node = { fs: 'empty' };
+    cfg.resolve = {
+      alias: {
+        services: path.resolve('./services'),
+        pages: path.resolve('./pages'),
+        static: path.resolve('./static'),
+        utils: path.resolve('./utils'),
+        constants: path.resolve('./constants'),
+        client: path.resolve('./client'),
+        containers: path.resolve('./containers'),
+        locales: path.resolve('./locales'),
+        config: path.resolve('./config'),
+      },
+    };
     return cfg;
   },
 });
