@@ -5,6 +5,11 @@ export default {
   messages: objKeys2Strings({
     test: {
       testString: 'test string',
+    },
+    menu: {
+      team: 'Team',
+      clickMe: 'Click me',
+      searchBy: 'Search by'
     }
   }),
   // formats: object,

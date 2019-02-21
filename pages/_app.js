@@ -3,6 +3,8 @@ import App, { Container } from 'next/app';
 import { Provider } from 'react-redux';
 import Localization from 'containers/Localization';
 
+import 'style/main.sass';
+
 import withReduxStore from 'config/redux/with-redux-store';
 
 export default

@@ -14,7 +14,7 @@
   "license": "ISC",
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
-    "antd": "^3.8.1",
+    "antd": "^3.13.5",
     "babel-plugin-import": "^1.8.0",
     "babel-plugin-inline-import": "^3.0.0",
     "babel-polyfill": "^6.26.0",
@@ -27,6 +27,8 @@
     "moment": "^2.24.0",
     "next": "latest",
     "next-routes": "^1.4.2",
+    "node-sass": "^4.11.0",
+    "prop-types": "^15.7.2",
     "qs": "^6.6.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",

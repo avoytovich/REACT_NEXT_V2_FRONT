@@ -50,6 +50,8 @@ module.exports = withSass({
         containers: path.resolve('./containers'),
         locales: path.resolve('./locales'),
         config: path.resolve('./config'),
+        style: path.resolve('./style'),
+        components: path.resolve('./components'),
       },
     };
     return cfg;
