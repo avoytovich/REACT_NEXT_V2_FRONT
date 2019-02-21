@@ -4,3 +4,4 @@ node_modules/
 .next/
 .idea/
 ./static/sw.js
+package-lock.json
