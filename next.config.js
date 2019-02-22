@@ -41,6 +41,7 @@ module.exports = withSass({
     cfg.node = { fs: 'empty' };
     cfg.resolve = {
       alias: {
+        ...(cfg.resolve.alias || {}),
         services: path.resolve('./services'),
         pages: path.resolve('./pages'),
         static: path.resolve('./static'),
