@@ -16,6 +16,11 @@ const URLS = [
     pattern: '/test/:id',
     path: 'test',
   },
+  {
+    name: 'cardholder',
+    pattern: '/cardholder/:id',
+    path: 'cardholder',
+  },
 ];
 
 module.exports = URLS;

@@ -9,7 +9,8 @@ export default {
     menu: {
       team: 'Team',
       clickMe: 'Click me',
-      searchBy: 'Search by'
+      searchBy: 'Search by',
+      otherCards: 'Other Cards'
     }
   }),
   // formats: object,
